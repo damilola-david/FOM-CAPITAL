@@ -1,0 +1,15 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+$custom-colors: (
+  "grape":#6f2da8,
+  "daisy":#fffe7a,
+  "altyellow":#635604,
+  "indigo":#4B0082,
+  "altpurple":#530a6c,
+  "dark-purple":#551a8b,
+  "pale":#9a79d7,
+  "very-dark":#150127
+
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+@import "../node_modules/bootstrap/scss/bootstrap";

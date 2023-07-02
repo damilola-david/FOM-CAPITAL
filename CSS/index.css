@@ -1,0 +1,133 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+     background-color: #551a8b;
+     color: #fff;
+}
+.nav-list {
+    position: relative;
+}
+
+#bar {
+    position: absolute;
+    bottom: 0px;
+    background-color: #530a6c;
+    width: 00%;
+    height: 2px;
+    left: 0px;
+}
+
+.nav-link::after {
+    content: "";
+    height: 2px;
+    width: 70px;
+    background-color: #530a6c;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    visibility: hidden;
+}
+
+.nav-item:hover .nav-link::after {
+    visibility: visible;
+}
+
+.hero-banner {
+    background-image: url("../IMAGES/jason-goodman-Kt-E_Qq8DW4-unsplash.jpg");
+    background-size: cover;
+    height: 93vh;
+    background-position: center -500px;
+    position: relative;
+    isolation: isolate;
+    line-height: 1.8;
+}
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: -5;
+    background: rgba(24, 24, 24, 0.274);
+}
+
+.icons {
+    width: 60px;
+    height: 60px;
+}
+
+.services {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: -4;
+    background: #19181b97;
+}
+
+#scale-image-con {
+    height: 100%;
+}
+
+#quote-image {
+    width: 90%;
+    height: 700px;
+    object-fit: cover;
+    object-position: center;
+}
+#quote-text{
+    width: 80%;
+}
+.fa-brands:hover{
+    color: #551a8b !important;
+}
+@media all and (max-width:950px) {
+    .container {
+        min-width: 95%;
+    }
+
+    .hero-banner {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-banner>div>div {
+        width: 90% !important;
+    }
+
+
+    #scale-image-con {
+        height: 100%;
+    }
+    #quote-image{
+        width: 100%;
+        height: 500px;
+    }
+    #quote-text{
+        width: 100%;
+    }
+}
+
+@media all and (max-width:600px) {
+    .container{
+        max-width: 90% !important;
+    }
+    #scale-image {
+        clip-path: none !important;
+        display: none;
+        width: 0px !important;
+        height: 0px !important;
+    }
+    #scale-image-con {
+        height: 0%;
+    }
+}
